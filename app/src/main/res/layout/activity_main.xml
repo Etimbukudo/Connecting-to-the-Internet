@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="22sp"
+        android:hint="Enter a query, then click Search"
+        android:id="@+id/et_search_box"/>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="22sp"
+        android:id="@+id/tv_url_display"
+        android:text="Click search and your URL will show up here!"
+        android:layout_marginTop="8dp"/>
+    <FrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <ScrollView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:id="@+id/tv_github_search_results_json"
+                android:text="Make a search!"/>
+
+        </ScrollView>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="22sp"
+            android:id="@+id/tv_error_message_display"
+            android:text="@string/error_message"
+            android:visibility="invisible"
+            android:padding="16dp"/>
+
+        <!--COMPLETED (23) Make this ProgressBar a child of the FrameLayout that you added above-->
+
+
+        <ProgressBar android:layout_height="42dp"
+            android:layout_width="42dp"
+            android:id="@+id/pb_loading_indicator"
+            android:visibility="invisible"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+</LinearLayout>
+
+
+
+
